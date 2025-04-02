@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI xmi.version="2.1" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.omg.org/spec/UML/20110701">
+<XMI xmi:version="2.1" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.omg.org/spec/UML/20110701">
   <uml:Model xmi:id="model1" name="ModeloBaseDatosTextosLegales">
+  
     <!-- Clase: Usuario -->
     <packagedElement xmi:type="uml:Class" xmi:id="Usuario" name="Usuario">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Usuario_idUsuario" name="idUsuario" type="Integer">
-        <!-- Clave primaria -->
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" value="1"/>
-      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Usuario_idUsuario" name="idUsuario" type="Integer"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="Usuario_Nombre" name="Nombre" type="String"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="Usuario_CorreoElectronico" name="CorreoElectronico" type="String"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="Usuario_PaisRegistro" name="PaisRegistro" type="String"/>
@@ -17,11 +14,7 @@
 
     <!-- Clase: TextoLegal -->
     <packagedElement xmi:type="uml:Class" xmi:id="TextoLegal" name="TextoLegal">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_idTextoLegal" name="idTextoLegal" type="Integer">
-        <!-- Clave primaria -->
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" value="1"/>
-      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_idTextoLegal" name="idTextoLegal" type="Integer"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_TipoDocumento" name="TipoDocumento" type="String"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_Version" name="Version" type="String"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_FechaPublicacion" name="FechaPublicacion" type="Date"/>
@@ -32,46 +25,23 @@
 
     <!-- Clase: Aceptacion -->
     <packagedElement xmi:type="uml:Class" xmi:id="Aceptacion" name="Aceptacion">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_idAceptacion" name="idAceptacion" type="Integer">
-        <!-- Clave primaria -->
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" value="1"/>
-      </ownedAttribute>
-      <!-- Nota: Las propiedades idUsuario e idTextoLegal se modelan mediante asociaciones -->
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_idAceptacion" name="idAceptacion" type="Integer"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_Version" name="Version" type="String"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_FechaHoraAceptacion" name="FechaHoraAceptacion" type="DateTime"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_Idioma" name="Idioma" type="String"/>
-      <!-- Restricción: Un usuario debe aceptar una versión de un texto legal solo una vez -->
-      <ownedComment xmi:type="uml:Comment" xmi:id="Constraint_Aceptacion">
-        <body>Restricción: cada usuario puede aceptar una versión de un texto legal solo una vez.</body>
-      </ownedComment>
     </packagedElement>
 
-    <!-- Asociación: Usuario 1 --- * Aceptacion -->
+    <!-- Asociación: Usuario (1) -> (N) Aceptacion -->
     <packagedElement xmi:type="uml:Association" xmi:id="Asoc_Usuario_Aceptacion" name="acepta">
-      <!-- Extremidad en Aceptacion -->
-      <ownedEnd xmi:type="uml:Property" xmi:id="Aceptacion_usuario" name="usuario" type="Usuario">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" value="1"/>
-      </ownedEnd>
-      <!-- Extremidad en Usuario -->
-      <ownedEnd xmi:type="uml:Property" xmi:id="Usuario_aceptaciones" name="aceptaciones" type="Aceptacion">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="*"/>
-      </ownedEnd>
+      <memberEnd xmi:idref="Usuario_idUsuario"/>
+      <memberEnd xmi:idref="Aceptacion_idAceptacion"/>
     </packagedElement>
 
-    <!-- Asociación: TextoLegal 1 --- * Aceptacion -->
+    <!-- Asociación: TextoLegal (1) -> (N) Aceptacion -->
     <packagedElement xmi:type="uml:Association" xmi:id="Asoc_TextoLegal_Aceptacion" name="esAceptadoPor">
-      <!-- Extremidad en Aceptacion -->
-      <ownedEnd xmi:type="uml:Property" xmi:id="Aceptacion_textoLegal" name="textoLegal" type="TextoLegal">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" value="1"/>
-      </ownedEnd>
-      <!-- Extremidad en TextoLegal -->
-      <ownedEnd xmi:type="uml:Property" xmi:id="TextoLegal_aceptaciones" name="aceptaciones" type="Aceptacion">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="*"/>
-      </ownedEnd>
+      <memberEnd xmi:idref="TextoLegal_idTextoLegal"/>
+      <memberEnd xmi:idref="Aceptacion_idAceptacion"/>
     </packagedElement>
-    
+
   </uml:Model>
 </XMI>
