@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI xmi.version="2.1" xmlns:uml="http://www.omg.org/spec/UML/20110701">
+<XMI xmi.version="2.1" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.omg.org/spec/UML/20110701">
   <uml:Model xmi:id="model1" name="ModeloBaseDatosTextosLegales">
     <!-- Clase: Usuario -->
     <packagedElement xmi:type="uml:Class" xmi:id="Usuario" name="Usuario">
@@ -37,11 +37,11 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="1"/>
         <lowerValue xmi:type="uml:LiteralInteger" value="1"/>
       </ownedAttribute>
-      <!-- Nota: Las propiedades idUsuario y idTextoLegal se modelan mediante asociaciones -->
+      <!-- Nota: Las propiedades idUsuario e idTextoLegal se modelan mediante asociaciones -->
       <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_Version" name="Version" type="String"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_FechaHoraAceptacion" name="FechaHoraAceptacion" type="DateTime"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_Idioma" name="Idioma" type="String"/>
-      <!-- Restricción: Un usuario debe aceptar una versión de un texto legal solo una vez (único sobre idUsuario, idTextoLegal y Version) -->
+      <!-- Restricción: Un usuario debe aceptar una versión de un texto legal solo una vez -->
       <ownedComment xmi:type="uml:Comment" xmi:id="Constraint_Aceptacion">
         <body>Restricción: cada usuario puede aceptar una versión de un texto legal solo una vez.</body>
       </ownedComment>
@@ -75,4 +75,3 @@
     
   </uml:Model>
 </XMI>
-
