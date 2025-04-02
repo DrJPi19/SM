@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <!-- Actores -->
+    <mxCell id="2" value="Usuario" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="50" y="50" width="80" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="3" value="Sistema" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="250" y="50" width="80" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- Secuencia de interacción -->
+    <mxCell id="4" value="Iniciar Sesión" style="edgeStyle=elbowEdgeStyle;rounded=1;" edge="1" parent="1" source="2" target="3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="5" value="Verificar país" style="edgeStyle=elbowEdgeStyle;rounded=1;" edge="1" parent="1" source="3" target="3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="6" value="Consultar textos pendientes" style="edgeStyle=elbowEdgeStyle;rounded=1;" edge="1" parent="1" source="3" target="3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="7" value="Mostrar textos legales" style="edgeStyle=elbowEdgeStyle;rounded=1;" edge="1" parent="1" source="3" target="2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="8" value="Aceptar términos" style="edgeStyle=elbowEdgeStyle;rounded=1;" edge="1" parent="1" source="2" target="3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="9" value="Registrar aceptación" style="edgeStyle=elbowEdgeStyle;rounded=1;" edge="1" parent="1" source="3" target="3">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="10" value="Acceso concedido" style="edgeStyle=elbowEdgeStyle;rounded=1;" edge="1" parent="1" source="3" target="2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
