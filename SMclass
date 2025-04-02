@@ -1,1 +1,31 @@
-DrawSN
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <!-- Entidad Usuarios -->
+    <mxCell id="2" value="Usuarios&#xa;ID_Usuario (PK)&#xa;Nombre&#xa;Correo&#xa;País&#xa;Idioma&#xa;Fecha_Registro" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="50" width="180" height="120" as="geometry" />
+    </mxCell>
+    
+    <!-- Entidad Textos Legales -->
+    <mxCell id="3" value="Textos Legales&#xa;ID_TextoLegal (PK)&#xa;Tipo_Documento&#xa;Fecha_Publicación&#xa;Idioma&#xa;País&#xa;Contenido" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="350" y="50" width="200" height="140" as="geometry" />
+    </mxCell>
+    
+    <!-- Entidad Aceptaciones -->
+    <mxCell id="4" value="Aceptaciones&#xa;ID_Aceptacion (PK)&#xa;ID_Usuario (FK)&#xa;ID_TextoLegal (FK)&#xa;Fecha_Hora&#xa;Idioma_Aceptado&#xa;Versión_Firmada" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="200" y="250" width="220" height="140" as="geometry" />
+    </mxCell>
+    
+    <!-- Relaciones -->
+    <mxCell id="5" edge="1" parent="1" source="2" target="4" style="edgeStyle=elbowEdgeStyle;elbow=vertical;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="6" edge="1" parent="1" source="3" target="4" style="edgeStyle=elbowEdgeStyle;elbow=vertical;">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
+
