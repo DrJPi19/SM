@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0" version="26.2.4">
+  <diagram id="AOwrJ3HKE57Ekyme98Rb" name="Página-1">
+    <mxGraphModel dx="467289" dy="283379" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Inicio" style="ellipse;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-418940" y="-249220" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Usuario inicia sesión" style="shape=rectangle;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-418960" y="-249160" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Seleccionar idioma" style="shape=rectangle;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-419080" y="-248970" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Verificar país de acceso" style="shape=diamond;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-418880" y="-248970" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="¿Existen nuevas versiones de textos legales?" style="shape=diamond;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-418970" y="-248860" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Mostrar textos legales en el idioma registrado" style="shape=rectangle;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-418950" y="-248750" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="¿El usuario acepta los textos legales?" style="shape=diamond;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-418980" y="-248770" width="160" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="Registrar aceptación y historial" style="shape=rectangle;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-418960" y="-248560" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="Permitir acceso a la aplicación" style="shape=rectangle;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-418960" y="-248490" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="Denegar acceso" style="shape=rectangle;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-418790" y="-248560" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="Fin" style="ellipse;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="-418940" y="-248420" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="14" parent="1" source="2" target="3" edge="1" />
+        <mxCell id="15" parent="1" source="3" target="4" edge="1" />
+        <mxCell id="16" style="edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" source="4" target="5" edge="1" />
+        <mxCell id="17" style="edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" source="4" target="6" edge="1" />
+        <mxCell id="18" parent="1" source="6" target="7" edge="1" />
+        <mxCell id="19" parent="1" source="7" target="8" edge="1" />
+        <mxCell id="20" parent="1" source="8" target="9" edge="1" />
+        <mxCell id="21" style="edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" source="9" target="10" edge="1" />
+        <mxCell id="22" style="edgeStyle=elbowEdgeStyle;elbow=vertical;" parent="1" source="9" target="12" edge="1" />
+        <mxCell id="23" parent="1" source="10" target="11" edge="1" />
+        <mxCell id="24" parent="1" source="11" target="13" edge="1" />
+        <mxCell id="25" parent="1" source="12" target="13" edge="1" />
+        <mxCell id="Bvq5w_urNFzUi2PwKE7C-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.327;entryY=-0.039;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-419041.76" y="-248970" as="targetPoint" />
+            <mxPoint x="-418961.03" y="-249054.94" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-418960" y="-249054.44" />
+              <mxPoint x="-419042" y="-249054.44" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Bvq5w_urNFzUi2PwKE7C-27" value="¿Usuario nuevo?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-418960" y="-249090" width="120" height="67" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
