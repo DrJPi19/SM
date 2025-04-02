@@ -4,19 +4,19 @@
     <mxCell id="0" />
     <mxCell id="1" parent="0" />
     
-    <!-- Entidad Usuarios -->
-    <mxCell id="2" value="Usuarios&#xa;ID_Usuario (PK)&#xa;Nombre&#xa;Correo&#xa;País&#xa;Idioma&#xa;Fecha_Registro" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
-      <mxGeometry x="50" y="50" width="180" height="120" as="geometry" />
+    <!-- Clase Usuario -->
+    <mxCell id="2" value="Usuario&#xa;- ID_Usuario : int {PK}&#xa;- Nombre : string&#xa;- Correo : string&#xa;- País : string&#xa;- Idioma : string&#xa;- Fecha_Registro : datetime" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="50" y="50" width="200" height="140" as="geometry" />
     </mxCell>
     
-    <!-- Entidad Textos Legales -->
-    <mxCell id="3" value="Textos Legales&#xa;ID_TextoLegal (PK)&#xa;Tipo_Documento&#xa;Fecha_Publicación&#xa;Idioma&#xa;País&#xa;Contenido" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
-      <mxGeometry x="350" y="50" width="200" height="140" as="geometry" />
+    <!-- Clase TextoLegal -->
+    <mxCell id="3" value="TextoLegal&#xa;- ID_TextoLegal : int {PK}&#xa;- Tipo_Documento : string&#xa;- Fecha_Publicación : datetime&#xa;- Idioma : string&#xa;- País : string&#xa;- Contenido : text" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="350" y="50" width="220" height="160" as="geometry" />
     </mxCell>
     
-    <!-- Entidad Aceptaciones -->
-    <mxCell id="4" value="Aceptaciones&#xa;ID_Aceptacion (PK)&#xa;ID_Usuario (FK)&#xa;ID_TextoLegal (FK)&#xa;Fecha_Hora&#xa;Idioma_Aceptado&#xa;Versión_Firmada" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
-      <mxGeometry x="200" y="250" width="220" height="140" as="geometry" />
+    <!-- Clase Aceptacion -->
+    <mxCell id="4" value="Aceptacion&#xa;- ID_Aceptacion : int {PK}&#xa;- ID_Usuario : int {FK}&#xa;- ID_TextoLegal : int {FK}&#xa;- Fecha_Hora : datetime&#xa;- Idioma_Aceptado : string&#xa;- Version_Firmada : string" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+      <mxGeometry x="200" y="250" width="240" height="160" as="geometry" />
     </mxCell>
     
     <!-- Relaciones -->
