@@ -1,68 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<XMI xmi.version="2.1" xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.omg.org/spec/UML/20110701">
-  <uml:Model xmi:id="model1" name="ModeloBaseDatosTextosLegales">
-    <!-- Clase: Usuario -->
-    <packagedElement xmi:type="uml:Class" xmi:id="Usuario" name="Usuario">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Usuario_idUsuario" name="idUsuario" type="Integer">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" value="1"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Usuario_Nombre" name="Nombre" type="String"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Usuario_CorreoElectronico" name="CorreoElectronico" type="String"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Usuario_PaisRegistro" name="PaisRegistro" type="String"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Usuario_Idioma" name="Idioma" type="String"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Usuario_FechaRegistro" name="FechaRegistro" type="Date"/>
-    </packagedElement>
-
-    <!-- Clase: TextoLegal -->
-    <packagedElement xmi:type="uml:Class" xmi:id="TextoLegal" name="TextoLegal">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_idTextoLegal" name="idTextoLegal" type="Integer">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" value="1"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_TipoDocumento" name="TipoDocumento" type="String"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_Version" name="Version" type="String"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_FechaPublicacion" name="FechaPublicacion" type="Date"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_Idioma" name="Idioma" type="String"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_Pais" name="Pais" type="String"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="TextoLegal_Contenido" name="Contenido" type="String"/>
-    </packagedElement>
-
-    <!-- Clase: Aceptacion -->
-    <packagedElement xmi:type="uml:Class" xmi:id="Aceptacion" name="Aceptacion">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_idAceptacion" name="idAceptacion" type="Integer">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" value="1"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_Version" name="Version" type="String"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_FechaHoraAceptacion" name="FechaHoraAceptacion" type="DateTime"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="Aceptacion_Idioma" name="Idioma" type="String"/>
-      <ownedComment xmi:type="uml:Comment" xmi:id="Constraint_Aceptacion">
-        <body><![CDATA[Restricción: cada usuario puede aceptar una versión de un texto legal solo una vez.]]></body>
-      </ownedComment>
-    </packagedElement>
-
-    <!-- Asociación: Usuario (1) --- (*) Aceptacion -->
-    <packagedElement xmi:type="uml:Association" xmi:id="Asoc_Usuario_Aceptacion" name="acepta">
-      <ownedEnd xmi:type="uml:Property" xmi:id="Aceptacion_usuario" name="usuario" type="Usuario">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" value="1"/>
-      </ownedEnd>
-      <ownedEnd xmi:type="uml:Property" xmi:id="Usuario_aceptaciones" name="aceptaciones" type="Aceptacion">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="*"/>
-      </ownedEnd>
-    </packagedElement>
-
-    <!-- Asociación: TextoLegal (1) --- (*) Aceptacion -->
-    <packagedElement xmi:type="uml:Association" xmi:id="Asoc_TextoLegal_Aceptacion" name="esAceptadoPor">
-      <ownedEnd xmi:type="uml:Property" xmi:id="Aceptacion_textoLegal" name="textoLegal" type="TextoLegal">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="1"/>
-        <lowerValue xmi:type="uml:LiteralInteger" value="1"/>
-      </ownedEnd>
-      <ownedEnd xmi:type="uml:Property" xmi:id="TextoLegal_aceptaciones" name="aceptaciones" type="Aceptacion">
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" value="*"/>
-      </ownedEnd>
-    </packagedElement>
-    
-  </uml:Model>
-</XMI>
+<mxfile host="app.diagrams.net" modified="2025-04-02T12:00:00.000Z" agent="Mozilla/5.0" version="16.0.5" type="device">
+  <diagram id="bLRpM5Zl_1bAa6sg7EP0" name="Página-1">
+    <mxGraphModel dx="120" dy="60" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Nodo: Usuario -->
+        <mxCell id="usuario" value="Usuario&#xa;–––––––––––––––––&#xa;idUsuario : Integer (PK)&#xa;Nombre : String&#xa;CorreoElectr&oacute;nico : String&#xa;PaisRegistro : String&#xa;Idioma : String&#xa;FechaRegistro : Date" style="shape=swimlane;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="220" height="140" as="geometry"/>
+        </mxCell>
+        <!-- Nodo: TextoLegal -->
+        <mxCell id="textoLegal" value="TextoLegal&#xa;–––––––––––––––––&#xa;idTextoLegal : Integer (PK)&#xa;TipoDocumento : String&#xa;Version : String&#xa;FechaPublicacion : Date&#xa;Idioma : String&#xa;Pais : String&#xa;Contenido : String" style="shape=swimlane;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="240" height="180" as="geometry"/>
+        </mxCell>
+        <!-- Nodo: Aceptacion -->
+        <mxCell id="aceptacion" value="Aceptacion&#xa;–––––––––––––––––&#xa;idAceptacion : Integer (PK)&#xa;Version : String&#xa;FechaHoraAceptacion : DateTime&#xa;Idioma : String" style="shape=swimlane;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="260" width="240" height="120" as="geometry"/>
+        </mxCell>
+        <!-- Conector: Usuario a Aceptacion (Relación 1 a n) -->
+        <mxCell id="edge1" value="acepta" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="1" source="usuario" target="aceptacion">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="180" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Conector: TextoLegal a Aceptacion (Relación 1 a n) -->
+        <mxCell id="edge2" value="esAceptadoPor" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;" edge="1" parent="1" source="textoLegal" target="aceptacion">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="180" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
