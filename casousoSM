@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <!-- Actores -->
+    <mxCell id="2" value="Usuario" style="shape=ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;rounded=1;childLayout=stackLayout;verticalLabelPosition=middle;align=center;" vertex="1" parent="1">
+      <mxGeometry x="100" y="50" width="40" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="3" value="Sistema" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="300" y="100" width="400" height="300" as="geometry" />
+    </mxCell>
+
+    <!-- Casos de uso -->
+    <mxCell id="4" value="Iniciar sesión" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="1">
+      <mxGeometry x="350" y="150" width="100" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="5" value="Aceptar Texto Legal" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="1">
+      <mxGeometry x="350" y="230" width="150" height="50" as="geometry" />
+    </mxCell>
+    <mxCell id="6" value="Registrar Aceptación" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#000000;fillColor=#FFFFFF;" vertex="1" parent="1">
+      <mxGeometry x="350" y="310" width="150" height="50" as="geometry" />
+    </mxCell>
+
+    <!-- Relaciones -->
+    <mxCell id="7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonal=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0" edge="1" parent="1" source="2" target="4">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonal=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0" edge="1" parent="1" source="2" target="5">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonal=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0" edge="1" parent="1" source="2" target="6">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+  </root>
+</mxGraphModel>
